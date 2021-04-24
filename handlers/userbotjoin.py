@@ -23,7 +23,7 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
 from helpers.decorators import errors, authorized_users_only
 
-@Client.on_message(filters.group & filters.command([""^(\\/|!)join"]))
+@Client.on_message(filters.group & filters.command(["^(\\/|!)join"]))
 @authorized_users_only
 @errors
 async def addchannel(client, message):
@@ -60,7 +60,7 @@ async def addchannel(client, message):
             "<b>ഞാൻ വോയ്സിൽ കയറി</b>",
         )
     
-@USER.on_message(filters.group & filters.command([""^(\\/|!)leave"]))
+@USER.on_message(filters.group & filters.command(["^(\\/|!)leave"]))
 async def rem(USER, message):
     try:
         await USER.leave_chat(message.chat.id)
