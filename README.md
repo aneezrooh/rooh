@@ -1,14 +1,14 @@
-<h1 align="centre">DAISYXMUSIC V3 🎵</h1>
+<h3 align="centre"></h3>
 
 ### A bot that can play music on telegram group's voice call
 
-# Available on telegram as @DaisyXbot
+# Available on telegram as @musicangelprobot
 
 <p align="center">
   <img src="https://telegra.ph/file/f0dd552b7ac42baf71604.jpg">
 </p>
 
-<h2> Whats new 🔥 </h2>
+<h2> specialities</h2>
 
 - Thumbnail Support
 - Playlist Support
