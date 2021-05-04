@@ -81,7 +81,7 @@ async def addchannel(client, message):
         await USER.leave_pytgcalls_active_calls()
      except:
         await message.reply_text(
-            f"<b><i>ഞാ പോവൂല..... എന്നെ എറക്കി വിട്ടാലും പൊവൂല</u></b>
+            f"<b><i>ഞാ പോവൂല..... എന്നെ എറക്കി വിട്ടാലും പൊവൂല</u></b>",
        )
        return   
     
