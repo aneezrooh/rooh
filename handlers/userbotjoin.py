@@ -30,7 +30,6 @@ async def addchannel(client, message):
     chid = message.chat.id
     try:
         invitelink = await client.export_chat_invite_link(chid)
-    try:
         invitelink = await client.export_pytgcalls.active_calls
     except:
         await message.reply_text(
