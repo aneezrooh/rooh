@@ -30,7 +30,7 @@ async def addchannel(client, message):
     chid = message.chat.id
     try:
         invitelink = await client.export_chat_invite_link(chid)
-        invitelink = await client.export_pytgcalls.active_calls
+        invitelink = await client.export_pytgcalls_active_calls
     except:
         await message.reply_text(
             "<b>Add me as admin of yor group first</b>",
