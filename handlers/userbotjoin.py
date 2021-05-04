@@ -63,7 +63,6 @@ async def addchannel(client, message):
 @Client.on_message(filters.group & filters.command(["joinvc"]))
 @authorized_users_only
 @errors
-    try:
         await USER.join_pytgcalls_active_calls(invitelink)
         await USER.send_message(message.chat.id,"ഞാൻ വീസിയിൽ കയറി.അപ്പോ തുടങ്ങട്ടെ")
     except UserAlreadyParticipant:
