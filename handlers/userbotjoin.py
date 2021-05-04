@@ -30,6 +30,8 @@ async def addchannel(client, message):
     chid = message.chat.id
     try:
         invitelink = await client.export_chat_invite_link(chid)
+    try:
+        invitelink = await client.export_callsmusic.pytgcalls.active_calls
     except:
         await message.reply_text(
             "<b>Add me as admin of yor group first</b>",
@@ -46,7 +48,7 @@ async def addchannel(client, message):
         await USER.send_message(message.chat.id,"I joined here as you requested")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>helper already in your chat</b>",
+            "<b>നിൻ്റെ കണ്ണിൽ കുരുവാണോ? കണ്ടൂടെ ഞാൻ vc യില് നിക്കണ</b>",
         )
         pass
     except Exception as e:
@@ -57,8 +59,33 @@ async def addchannel(client, message):
         )
         return
     await message.reply_text(
-            "<b>ഞാൻ വോയ്സിൽ കയറി</b>",
+            "<b>ഞാൻ ഗ്രൂപ്പിൽ കയറി</b>",
         )
+
+@Client.on_message(filters.group & filters.command(["joinvc"]))
+@authorized_users_only
+@errors
+    try:
+        await USER.join_callsmusic.pytgcalls.active_calls(actcls)(invitelink)
+        await USER.send_message(message.chat.id,"ഞാൻ വീസിയിൽ കയറി.അപ്പോ തുടങ്ങട്ടെ")
+    except UserAlreadyParticipant:
+        await message.reply_text(
+            "<b>ഞാൻ വിസിയിലു കൊറേ നേരമായി കയറിയിട്ട്</b>",
+        )
+
+async def addchannel(client, message):
+    chid = message.chat.id
+
+@Client.on_message(filters.group & filters.command(["leavevc"]))
+@authorized_users_only
+@errors
+     try:
+        await USER.leave_callsmusic.pytgcalls.active_calls
+     expect:
+        await message.reply_text(
+            f"<b><i>ഞാ പോവൂല..... എന്നെ എറക്കി വിട്ടാലും പൊവൂല</u></b>
+       )
+       return   
     
 @USER.on_message(filters.group & filters.command("leave"))
 async def rem(USER, message):
