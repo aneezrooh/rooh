@@ -64,7 +64,7 @@ async def addchannel(client, message):
 @authorized_users_only
 @errors
     try:
-        await USER.join_pytgcalls.active_calls(invitelink)
+        await USER.join_pytgcalls_active_calls(invitelink)
         await USER.send_message(message.chat.id,"ഞാൻ വീസിയിൽ കയറി.അപ്പോ തുടങ്ങട്ടെ")
     except UserAlreadyParticipant:
         await message.reply_text(
@@ -78,7 +78,7 @@ async def addchannel(client, message):
 @authorized_users_only
 @errors
      try:
-        await USER.leave_pytgcalls.active_calls
+        await USER.leave_pytgcalls_active_calls
      expect:
         await message.reply_text(
             f"<b><i>ഞാ പോവൂല..... എന്നെ എറക്കി വിട്ടാലും പൊവൂല</u></b>
