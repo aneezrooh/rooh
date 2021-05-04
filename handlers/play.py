@@ -136,27 +136,6 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     os.remove("temp.png")
     os.remove("background.png")
 
-playlist.append(m_audio)
-    if len(playlist) == 1:
-        m_status = await m.reply_text(
-            f"{emoji.INBOX_TRAY} downloading and transcoding..."
-        )
-        await download_audio(playlist[0])
-        group_call.input_filename = os.path.join(
-            client.workdir,
-            DEFAULT_DOWNLOAD_DIR,
-            f"{playlist[0].audio.file_unique_id}.raw"
-        )
-        await mp.update_start_time()
-        await m_status.delete()
-        print(f"- START PLAYING: {playlist[0].audio.title}")
-    await mp.send_playlist()
-    for track in playlist[:2]:
-        await download_audio(track)
-    if not m.audio:
-        await m.delete()
-
- 
 
 @Client.on_message(
     filters.command("playlist")
