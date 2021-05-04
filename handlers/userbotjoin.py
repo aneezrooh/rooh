@@ -79,7 +79,7 @@ async def addchannel(client, message):
 @errors
      try:
         await USER.leave_pytgcalls_active_calls()
-     expect:
+     except:
         await message.reply_text(
             f"<b><i>ഞാ പോവൂല..... എന്നെ എറക്കി വിട്ടാലും പൊവൂല</u></b>
        )
