@@ -63,7 +63,7 @@ async def addchannel(client, message):
 @Client.on_message(filters.group & filters.command(["joinvc"]))
 @authorized_users_only
 @errors
-        await USER.join_callsmusic(invitelink)
+        USER.join_callsmusic()
         await USER.send_message(message.chat.id,"ഞാൻ വീസിയിൽ കയറി.അപ്പോ തുടങ്ങട്ടെ")
     except UserAlreadyParticipant:
         await message.reply_text(
@@ -77,7 +77,7 @@ async def addchannel(client, message):
 @authorized_users_only
 @errors
      try:
-        await USER.leave_callsmusic.active_calls()
+        await USER.leave_callsmusic()
      except:
         await message.reply_text(
             f"<b><i>ഞാ പോവൂല..... എന്നെ എറക്കി വിട്ടാലും പൊവൂല</u></b>",
