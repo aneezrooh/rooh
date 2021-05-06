@@ -54,7 +54,7 @@ async def rem(USER, message):
 @USER.on_message(filters.group & filters.command(["vcjoin"]))
 async def rem(USER, message):
     try:
-         await USER.join_call(message.chat.id)
+         await USER.join_active_calls(message.chat.id)
     except: 
       await message.reply_text(
           f"<b>ഞാൻ കയറില്ല</b>" ,
