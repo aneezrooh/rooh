@@ -62,7 +62,7 @@ async def addchannel(client, message):
         await USER.send_message(message.chat.id,"I joined here as you requested")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>helper already in your VC</b>",
+            "<b>user already in your VC</b>",
         )
         pass
     except Exception as e:
@@ -72,7 +72,7 @@ async def addchannel(client, message):
             "\n\nOr manually add @doruzzz to your VC and try again</b>",
         )
         return
-    await message.reply_text(
+        await message.reply_text(
             "<b>helper userbot joined your vc</b>",
         )
          return
