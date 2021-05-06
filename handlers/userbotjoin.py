@@ -51,25 +51,15 @@ async def rem(USER, message):
             "\n\nOr manually kick me from to your Group</b>",
         )
         return
-@Client.on_message(filters.group & filters.command(["joinvc"]))
+@USER.on_message(filters.group & filters.command(["joinvc"]))
 @authorized_users_only
 @errors
 async def addchannel(client, message):
-    chid = message.chat.id
-    try:
-        invitelink = await client.export_call_invite_link
-    except:
-        await message.reply_text(
-            "<b>Add me as admin of yor group first</b>",
-        )
-        return
-
-    try:
+        chid = message.chat.id
         user = await USER.get_me()
     except:
         user.first_name =  "Doramusix"
-
-    try:
+       try:
         await USER.join_call(invitelink)
         await USER.send_message(message.chat.id,"I joined here as you requested")
     except UserAlreadyParticipant:
