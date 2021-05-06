@@ -63,19 +63,19 @@ async def addchannel(client, message):
 @Client.on_message(filters.group & filters.command(["joinvc"]))
 @authorized_users_only
 @errors 
+async def addchannel(client, message):
+    chid = message.chat.id
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await USER.send_message(message.chat.id,"ഞാൻ വീസിയിൽ കയറി.അപ്പോ തുടങ്ങട്ടെ")
     except ; UserAlreadyParticipant
         await message.reply_text(
             "<b>ഞാൻ വിസിയിലു കൊറേ നേരമായി കയറിയിട്ട്</b>",
         )
-
-async def addchannel(client, message):
-    chid = message.chat.id
-
 @Client.on_message(filters.group & filters.command(["leavevc"]))
 @authorized_users_only
 @errors
+async def addchannel(client, message):
+    chid = message.chat.id
         callsmusic.pytgcalls.leave_group_call(message.chat.id, file_path)
      except:
         await message.reply_text(
