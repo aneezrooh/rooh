@@ -58,6 +58,4 @@ async def rem(USER, message):
     except: 
       await message.reply_text(
           f"<b>ഞാൻ കയറില്ല</b>" ,
-        
          )
-         return
