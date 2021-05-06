@@ -21,7 +21,7 @@ async def addchannel(client, message):
         user = await USER.get_me()
 
         user.first_name =  "DaisyMusix"
-     except:
+
         await USER.join_chat(invitelink)
         await USER.send_message(message.chat.id,"I joined here as you requested")
     except UserAlreadyParticipant:
