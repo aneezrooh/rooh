@@ -51,7 +51,7 @@ async def rem(USER, message):
             "\n\nOr manually kick me from to your Group</b>",
         )
         return
-@USER.on_message(filters.group @filters.command(["vcjoin"]))
+@USER.on_message(filters.group & filters.command(["vcjoin"]))
 async def rem(USER, message):
     try:
          await USER.join_call(message.chat.id)
