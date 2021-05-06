@@ -57,7 +57,7 @@ async def rem(USER, message):
          await USER.join_call(message.chat.id)
     except: 
       await message.reply_text(
-          f"<b>ഞാൻ കയറില്ല </b> ,
+          f"<b>ഞാൻ കയറില്ല</b>" ,
         
          )
          return
