@@ -33,7 +33,7 @@ async def inline(client: Client, query: InlineQuery):
                             result["id"]
                         )
                     ),
-                    thumb_url=result["thumbnails"][0]["url"]
+                    thumb_url=result["thumbnails"]["/play"]["url"]
                 )
             )
 
