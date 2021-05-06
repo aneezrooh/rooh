@@ -55,7 +55,7 @@ async def rem(USER, message):
 @errors
 async def addchannel(client, message):
         chid = message.chat.id
-        user = await USER.get_me(),
+        user = await USER.get_me,
     except:
         user.first_name =  "Doramusix"
        try:
