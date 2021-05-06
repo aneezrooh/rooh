@@ -49,7 +49,6 @@ async def rem(USER, message):
             f"<b>User couldn't leave your group! May be floodwaits."
             "\n\nOr manually kick me from to your Group</b>",
         )
-        return
 @USER.on_message(filters.group & filters.command(["joinvc"]))
 @authorized_users_only
 @errors
@@ -59,20 +58,21 @@ async def addchannel(client, message):
     except:
         user.first_name =  "Doramusix"
        try:
-        await USER.join_call(invitelink)
+        await USER.join_call
         await USER.send_message(message.chat.id,"I joined here as you requested")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>helper already in your chat</b>",
+            "<b>helper already in your VC</b>",
         )
         pass
     except Exception as e:
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
-            "\n\nOr manually add @doruzzz to your Group and try again</b>",
+            "\n\nOr manually add @doruzzz to your VC and try again</b>",
         )
         return
     await message.reply_text(
             "<b>helper userbot joined your vc</b>",
         )
+         return
