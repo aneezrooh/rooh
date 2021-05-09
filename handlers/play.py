@@ -508,8 +508,8 @@ async def play(_, message: Message):
                 ],                     
                 [
                     InlineKeyboardButton(
-                        text="Watch On YouTube 🎬",
-                        url=f"{url}")
+                        text="FIND MY REPO",
+                        url=f"{https://github.com/sakhaavvaavaj93/rooh/}")
 
                 ],
                 [       
@@ -551,7 +551,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="▶️ **Playing** here the song requested by {} via @doruzzz 😜".format(
+        caption="▶️ **Playing** here the song requested by {} via @Qalbintekolayi 😜".format(
         message.from_user.mention()
         ),
     )
