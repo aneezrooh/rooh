@@ -509,7 +509,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="FIND MY REPO",
-                        url=f"{https://github.com/sakhaavvaavaj93/rooh/}")
+                        url="https://github.com/sakhaavvaavaj93/rooh.git")
 
                 ],
                 [       
