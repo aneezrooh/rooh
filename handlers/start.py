@@ -32,14 +32,14 @@ async def start(_, message: Message):
             [ 
                 [
                     InlineKeyboardButton(
-                        "our family",url="https://t.me/kkArmy")
+                        "support",url="https://t.me/joinchat/WU67YpcYxWfQRdJf")
                   ],[
                     InlineKeyboardButton(
-                        "👨‍💻 Updates 👨‍💻", url="https://t.me/kk_musical_army_official"
+                        "👨‍💻 Updates 👨‍💻", url="https://t.me/DIGITALMUSIXBOT"
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        "Link_market", url="https://t.me/kk_linkmarketofficial"
+                        "OWNER", url="https://t.me/Aneezrooh"
                     )]
             ]
         ),
@@ -53,7 +53,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "contact owner", url="https://t.me/vaasukionfire7966")
+                        "contact owner", url="https://t.me/Aneezrooh")
                 ]
             ]
         )
